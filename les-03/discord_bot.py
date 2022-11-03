@@ -9,7 +9,7 @@ bottoken=open("C:/geheim/discordbot.txt", "r").readline()
 async def on_ready():
 
     guild = client.guilds[0]
-    print(guild.name, "is te nae of the server")
+    print(guild.name, "is te name of the server")
     print(client.user, "has connected to the server")
     channel = guild.text_channels[0]
     print(channel.name, "is the name of the channel")
@@ -22,7 +22,7 @@ async def on_message(message):
     print(message.author, "is the user who wrote this")
     print(message.created_at, "is when the message was posted")
     print(message.channel, "is the channel this message was posted")
-    if message.author.bot == False:
+    if message.author.bot == True:
         await message.channel.send("Hello " + str(message.author))
     
     
